@@ -1,5 +1,6 @@
 # Instruction
 
+## Create app
 
 Origin [link](https://developers.livechat.com/docs/getting-started/guides/webhook-apps/)
 
@@ -10,6 +11,9 @@ Origin [link](https://developers.livechat.com/docs/getting-started/guides/webhoo
 4. Add block "App Authorization", click to "Server-side app" and click "Continue". In next page:
 	* find "Redirect URI whitelist" and add `https://youdomain.zone`
 	* find "Access scopes" and add `webhooks--my:rw` and `webhooks_manage`
+
+
+## Get access token
 
 Open [Authorizing API calls
 ](https://developers.livechat.com/docs/getting-started/authorization/#agent-authorization-flows) page and go to [Public server-side apps](https://developers.livechat.com/docs/getting-started/authorization/#public-server-side-apps) section
@@ -46,6 +50,8 @@ Open [Authorizing API calls
 
 	terminal return json object with `access_token` - copy it in `TOKEN_ACCESS`
 	
+
+## Registration hook
 	
 Open [Configuration API](https://developers.livechat.com/docs/management/configuration-api) page and go to section [Register Webhook](https://developers.livechat.com/docs/management/configuration-api/#register-webhook)
 
@@ -68,3 +74,20 @@ Open [Configuration API](https://developers.livechat.com/docs/management/configu
 	* `API_URI_STRING` - you api endpoint
 	* `ACTION_STRING` - action from [Actions](https://developers.livechat.com/docs/management/configuration-api/#triggering-actions)
 	* `CLIENT_SECRET_STRING` - string from "Client Secret" in "App Authorization" block
+
+	
+## Install app
+
+Open [User console](https://my.livechatinc.com/home) and install "App" from [Marketplace](https://my.livechatinc.com/marketplace)
+
+For self account go to "Private Apps" and install "App"
+
+## Insert script
+
+Open [Setings](https://my.livechatinc.com/settings/code), find "Install LiveChat code manually", copy `script` and past it on page
+where you want see "LiveChat"
+
+
+## Check API
+
+Run you API server and write something in "LiveChat"
