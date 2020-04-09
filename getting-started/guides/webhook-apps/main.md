@@ -73,7 +73,7 @@ Open [Configuration API](https://developers.livechat.com/docs/management/configu
 	where
 	* `TOKEN_ACCESS` - token from "Get access token" section this instruction, see "Step 4"
 	* `API_URI_STRING` - you api endpoint
-	* `ACTION_STRING` - action from [Actions](https://developers.livechat.com/docs/management/configuration-api/#triggering-actions)
+	* `ACTION_STRING` - action from [Actions](https://developers.livechat.com/docs/management/configuration-api/#triggering-actions), for example try `incoming_event`
 	* `CLIENT_SECRET_STRING` - string from "Client Secret" in "App Authorization" block
 
 	
