@@ -25,7 +25,7 @@ Open [Authorizing API calls
 	```
 	where
 	* `CLIENT_ID_STRING` - string from "Client Id" in "App Authorization" block
-	* `REDIRECT_URI_STRING ` - string from "Redirect URI whitelist" in "App Authorization" block
+	* `REDIRECT_URI_STRING` - string from "Redirect URI whitelist" in "App Authorization" block
 		
 3. After redicect, to `redirect_uri` copy `code` from URL to `CODE_STRING`
 4. Open terminal and exec:
@@ -39,7 +39,32 @@ Open [Authorizing API calls
 			redirect_uri=REDIRECT_URI_STRING"
 	``` 
 	where 
-	* `CODE_STRING`
-	* `CLIENT_ID_STRING`
-	* `CLIENT_SECRET_STRING`
-	* `REDIRECT_URI_STRING`
+	* `CODE_STRING` - code from "Step 3"
+	* `CLIENT_ID_STRING` - string from "Client Id" in "App Authorization" block
+	* `CLIENT_SECRET_STRING` - string from "Client Secret" in "App Authorization" block
+	* `REDIRECT_URI_STRING` - string from "Redirect URI whitelist" in "App Authorization" block
+
+	terminal return json object with `access_token` - copy it in `TOKEN_ACCESS`
+	
+	
+Open [Configuration API](https://developers.livechat.com/docs/management/configuration-api) page and go to section [Register Webhook](https://developers.livechat.com/docs/management/configuration-api/#register-webhook)
+
+1. Open terminal and exec:
+
+	```
+	curl -X POST \
+		https://api.livechatinc.com/v3.1/configuration/action/register_webhook \
+		-H 'Content-Type: application/json' \
+		-H 'Authorization: Bearer dal:hQjZv-72T06tHh8uW8brmw' \
+		-d '{
+        "url": "API_URI_STRING",
+        "description": "Describtion for hook",
+        "action": "ACTION_STRING",
+        "secret_key": "CLIENT_SECRET_STRING"  
+		}'
+
+	```
+	where
+	* `API_URI_STRING` - you api endpoint
+	* `ACTION_STRING` - action from [Actions](https://developers.livechat.com/docs/management/configuration-api/#triggering-actions)
+	* `CLIENT_SECRET_STRING` - string from "Client Secret" in "App Authorization" block
