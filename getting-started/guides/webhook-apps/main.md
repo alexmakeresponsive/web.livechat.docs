@@ -61,7 +61,7 @@ Open [Configuration API](https://developers.livechat.com/docs/management/configu
 	curl -X POST \
 		https://api.livechatinc.com/v3.1/configuration/action/register_webhook \
 		-H 'Content-Type: application/json' \
-		-H 'Authorization: Bearer dal:hQjZv-72T06tHh8uW8brmw' \
+		-H 'Authorization: Bearer TOKEN_ACCESS' \
 		-d '{
         "url": "API_URI_STRING",
         "description": "Describtion for hook",
@@ -71,6 +71,7 @@ Open [Configuration API](https://developers.livechat.com/docs/management/configu
 
 	```
 	where
+	* `TOKEN_ACCESS` - token from "Get access token" section this instruction, see "Step 4"
 	* `API_URI_STRING` - you api endpoint
 	* `ACTION_STRING` - action from [Actions](https://developers.livechat.com/docs/management/configuration-api/#triggering-actions)
 	* `CLIENT_SECRET_STRING` - string from "Client Secret" in "App Authorization" block
